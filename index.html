@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,104 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
     <title>Acertijos PONELE (BETA)</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <div id="content">
-        <div id="acertijo">
-            <h1>ACERTIJO ACTUAL</h1>
-            <p>María tiene dos hijos. Si uno de ellos es niña, ¿qué probabilidades existen de que el otro sea un niño?</p>
-        </div>
-        <div id="ranking">
-            <div class="character" style="background-image: url('../images/characters/yoda-icon.png')"><p>9</p></div>
-            <div class="character" style="background-image: url('../images/characters/brave-icon.png')"><p>7</p></div>
-            <div class="character" style="background-image: url('../images/characters/tony-icon.png')"><p>7</p></div>
-            <div class="character" style="background-image: url('../images/characters/mulan-icon.png')"><p>6</p></div>
-            <div class="character" style="background-image: url('../images/characters/batman-icon.png')"><p>1</p></div>
-            <div class="character" style="background-image: url('../images/characters/chandler-icon.png')"><p>1</p></div>
-            <div class="character" style="background-image: url('../images/characters/sam-icon.png')"><p>1</p></div>
+    <header>
+        <h1>ACERTIJOS</h1>
+        <h2>(ponele)</h2>
+    </header>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-12 tile">
+                <div class="container" id="ranking">
+                    <div class="row ranking-title">
+                        <div class="col-12">
+                                <h1>Current ranking</h1>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking" ><img src="/images/characters/yoda-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Fede</p>
+                            <p>9 puntos</p>
+                            <p id="acertijo-fede" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <button class="toggle-button" onclick="$('#acertijo-fede').toggle()"">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking" ><img src="/images/characters/brave-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Marce</p>
+                            <p>7 puntos</p>
+                            <p id="acertijo-marce" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <button class="toggle-button" onclick="$('#acertijo-marce').toggle()"">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking" ><img src="/images/characters/tony-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Mariano</p>
+                            <p>7 puntos</p>
+                            <p id="acertijo-mariano" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <button class="toggle-button" onclick="$('#acertijo-mariano').toggle()"">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking" ><img src="/images/characters/mulan-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Luis</p>
+                            <p>6 puntos</p>
+                            <p id="acertijo-luis" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <button class="toggle-button" onclick="$('#acertijo-luis').toggle()"">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking" ><img src="/images/characters/batman-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Shalendra</p>
+                            <p>1 puntos</p>
+                            <p id="acertijo-shalendra" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <button class="toggle-button" onclick="$('#acertijo-shalendra').toggle()"">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking" ><img src="/images/characters/chandler-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Martín</p>
+                            <p>1 puntos</p>
+                            <p id="acertijo-martin" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <button class="toggle-button" onclick="$('#acertijo-martin').toggle()"">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking" ><img src="/images/characters/sam-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Sabrina</p>
+                            <p>1 puntos</p>
+                            <p id="acertijo-sabrina" style="display: none">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                            <button class="toggle-button" onclick="$('#acertijo-sabrina').toggle()"">Toggle quiz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 tile">
+                asd
+            </div>
         </div>
     </div>
-    <!--script type="text/javascript" src="js/main.js"></script-->
+    <script type="text/javascript" src="js/main.js"></script-->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
