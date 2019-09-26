@@ -2,166 +2,175 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
-    <title>Acertijos PONELE (BETA)</title>
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
+<title>Acertijos PONELE (BETA)</title>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <header>
-        <h1>ACERTIJOS</h1>
-        <h2>(ponele)</h2>
-    </header>
-    <div class="container" id="content">
-        <div class="row">
-            <div class="col-12 tile">
-                <div class="container" id="ranking">
-                    <div class="row ranking-title">
-                        <div class="col-12">
-                            <h1>Current ranking</h1>
-                        </div>
-                    </div>
-                    <div class="row ranking-item">
-                        <div class="col-1 profile-ranking"><img src="/images/characters/yoda-icon.png">
-                        </div>
-                        <div class="col-10 lightgray">
-                            <p class="ranking-item-name">Fede</p>
-                            <p>1 punto</p>
-                            <p id="acertijo-fede" style="display: none">Un hombre murió y fue al Paraiso. Había miles de
-                                personas, todas desnudas y con la apariencia que tenían a los 21 años. Miró alrededor
-                                tratando de reconocer a alguien. Súbitamente vio a una pareja y supo que se trataba de
-                                Adan y Eva ¿Cómo lo supo?
-                            </p>
+<header>
+<h1>ACERTIJOS</h1>
+<h2>(ponele)</h2>
+</header>
+<div class="container" id="content">
+<div class="row">
+<div class="col-12 tile">
+<div class="container" id="ranking">
+<div class="row ranking-title">
+<div class="col-12">
+<h1>Current ranking</h1>
+</div>
+</div>
 
-                            <button class="toggle-button" onclick="$('#acertijo-fede').toggle()"">Toggle quiz</button>
-                        </div>
-                    </div>
-                    <div class=" row ranking-item">
-                        <div class="col-1 profile-ranking"><img src="/images/characters/brave-icon.png">
-                        </div>
-                        <div class="col-10 lightgray">
-                            <p class="ranking-item-name">Marce</p>
-                            <p>1 puntos</p>
-                            <p id="acertijo-marce" style="display: none">Andrés y Manuel quedan para
-                                jugar al
-                                tenis. El que pierda el partido, deberá pagarle al ganador una cena.
-                                Juegan
-                                varios días en ese mes, y deciden que los partidos ganados se compensan
-                                con los
-                                partidos perdidos, para no tener que invitarse mutuamente,Andrés ganó 4
-                                partidos, y Manuel ganó 3 cenas. ¿Cuántos partidos jugaron en total?</p>
-                            <button class="toggle-button" onclick="$('#acertijo-marce').toggle()"">Toggle quiz</button>
-        </div>
-    </div>
-                    <div class=" row ranking-item">
-                        <div class="col-1 profile-ranking"><img
-                                src="/images/characters/chandler-icon.png">
-                        </div>
-                        <div class="col-10 lightgray">
-                            <p class="ranking-item-name">Martín</p>
-                            <p>1 puntos</p>
-                            <p id="acertijo-martin" style="display: none">Un
-                                hombre yace muerto en un campo. En el lugar no
-                                hay ninguna otra persona ni criatura y al lado
-                                del cuerpo sólo hay un paquete sin abrir. La
-                                única pista es que el hombre sabía que iba a
-                                morir conforme se acercaba al lugar. ¿Qué ha
-                                pasado?
 
-                            </p>
-                            <button class="toggle-button"
-                                onclick="$('#acertijo-martin').toggle()"">Toggle quiz</button>
-</div>
-</div>
-                    <div class=" row ranking-item">
-                                <div class="col-1 profile-ranking"><img src="/images/characters/batman-icon.png">
-                                </div>
-                                <div class="col-10 lightgray">
-                                    <p class="ranking-item-name">Shalendra</p>
-                                    <p>1 puntos</p>
-                                    <p id="acertijo-shalendra" style="display: none">You need to guess the word. This English word has 7 characters.
-                                    1st two characters indicate man.
-                                    1st three characters indicates woman.
-                                    1st four characters indicate a powerful man.
-                                    All seven characters indicate a powerful woman.
-                                    </p>
-                                    <button class="toggle-button" onclick="$('#acertijo-shalendra').toggle()"">Toggle quiz</button>
-                    </div>
-                    </div>
-                    <div class=" row ranking-item">
-                        <div class="col-1 profile-ranking"><img
-                                src="/images/characters/mulan-icon.png"></div>
-                        <div class="col-10 lightgray">
-                            <p class="ranking-item-name">Luis</p>
-                            <p>0 puntos</p>
-                            <p id="acertijo-luis" style="display: none">Si 5 máquinas
-                                tardan 5
-                                minutos en hacer 5 aparatos, ¿cuánto tiempo tardarían
-                                100
-                                máquinas en hacer 100 aparatos?</p>
-                            <button class="toggle-button"
-                                onclick="$('#acertijo-luis').toggle()"">Toggle quiz</button>
-</div>
-</div>
-                    
-                    <div class=" row ranking-item">
-                                                <div class="col-1 profile-ranking"><img
-                                                        src="/images/characters/tony-icon.png">
-                                                </div>
-                                                <div class="col-10 lightgray">
-                                                    <p class="ranking-item-name">Mariano</p>
-                                                    <p>0 puntos</p>
-                                                    <p id="acertijo-mariano" style="display: none">Traté de arreglar un
-                                                        reloj
-                                                        pero me parece que no lo conseguí. Ahora la aguja pequeña
-                                                        funciona
-                                                        perfectamente, pero el minutero se mueve en el sentido contrario
-                                                        al que
-                                                        debería hacerlo, pero con una velocidad constante, de tal manera
-                                                        que
-                                                        pasa al lado de la aguja pequeña cada 80 minutos.Pregunta: Si a
-                                                        las 6:30
-                                                        mi reloj muestra la hora correcta, ¿cuándo lo volverá a hacer?
-                                                    </p>
-                                                    <button class="toggle-button"
-                                                        onclick="$('#acertijo-mariano').toggle()"">Toggle quiz</button>
-                    </div>
-                    </div>
-                   
-                    
-                    <div class=" row ranking-item">
-                                                                        <div class="col-1 profile-ranking"><img
-                                                                                src="/images/characters/sam-icon.png">
-                                                                        </div>
-                                                                        <div class="col-10 lightgray">
-                                                                            <p class="ranking-item-name">Sabrina</p>
-                                                                            <p>0 puntos</p>
-                                                                            <p id="acertijo-sabrina"
-                                                                                style="display: none"></p>
-                                                                            <button class="toggle-button"
-                                                                                onclick="$('#acertijo-sabrina').toggle()"">Toggle quiz</button>
-                    </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class=" row ranking-item">
+    <div class="col-1 profile-ranking"><img
+    src="/images/characters/chandler-icon.png">
     </div>
-    <script type=" text/javascript" src="js/main.js"></script-->
-                                                                                <script
-                                                                                    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-                                                                                    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-                                                                                    crossorigin="anonymous"></script>
+    <div class="col-10 lightgray">
+    <p class="ranking-item-name">Martín</p>
+    <p>2 puntos</p>
+    <p id="acertijo-martin" style="display: none">Un
+    hombre yace muerto en un campo. En el lugar no
+    hay ninguna otra persona ni criatura y al lado
+    del cuerpo sólo hay un paquete sin abrir. La
+    única pista es que el hombre sabía que iba a
+    morir conforme se acercaba al lugar. ¿Qué ha
+    pasado?
+    
+    </p>
+    <button class="toggle-button"
+    onclick="$('#acertijo-martin').toggle()"">Toggle quiz</button>
+    </div>
+    </div>
+
+
+
+<div class="row ranking-item">
+<div class="col-1 profile-ranking"><img src="/images/characters/yoda-icon.png">
+</div>
+<div class="col-10 lightgray">
+<p class="ranking-item-name">Fede</p>
+<p>1 punto</p>
+<p id="acertijo-fede" style="display: none">Un hombre murió y fue al Paraiso. Había miles de
+personas, todas desnudas y con la apariencia que tenían a los 21 años. Miró alrededor
+tratando de reconocer a alguien. Súbitamente vio a una pareja y supo que se trataba de
+Adan y Eva ¿Cómo lo supo?
+</p>
+
+<button class="toggle-button" onclick="$('#acertijo-fede').toggle()"">Toggle quiz</button>
+</div>
+</div>
+<div class=" row ranking-item">
+<div class="col-1 profile-ranking"><img src="/images/characters/brave-icon.png">
+</div>
+<div class="col-10 lightgray">
+<p class="ranking-item-name">Marce</p>
+<p>1 puntos</p>
+<p id="acertijo-marce" style="display: none">Andrés y Manuel quedan para
+jugar al
+tenis. El que pierda el partido, deberá pagarle al ganador una cena.
+Juegan
+varios días en ese mes, y deciden que los partidos ganados se compensan
+con los
+partidos perdidos, para no tener que invitarse mutuamente,Andrés ganó 4
+partidos, y Manuel ganó 3 cenas. ¿Cuántos partidos jugaron en total?</p>
+<button class="toggle-button" onclick="$('#acertijo-marce').toggle()"">Toggle quiz</button>
+</div>
+</div>
+
+
+<div class=" row ranking-item">
+<div class="col-1 profile-ranking"><img src="/images/characters/batman-icon.png">
+</div>
+<div class="col-10 lightgray">
+<p class="ranking-item-name">Shalendra</p>
+<p>1 puntos</p>
+<p id="acertijo-shalendra" style="display: none">You need to guess the word. This English word has 7 characters.
+1st two characters indicate man.
+1st three characters indicates woman.
+1st four characters indicate a powerful man.
+All seven characters indicate a powerful woman.
+</p>
+<button class="toggle-button" onclick="$('#acertijo-shalendra').toggle()"">Toggle quiz</button>
+</div>
+</div>
+<div class=" row ranking-item">
+<div class="col-1 profile-ranking"><img
+src="/images/characters/mulan-icon.png"></div>
+<div class="col-10 lightgray">
+<p class="ranking-item-name">Luis</p>
+<p>0 puntos</p>
+<p id="acertijo-luis" style="display: none">Si 5 máquinas
+tardan 5
+minutos en hacer 5 aparatos, ¿cuánto tiempo tardarían
+100
+máquinas en hacer 100 aparatos?</p>
+<button class="toggle-button"
+onclick="$('#acertijo-luis').toggle()"">Toggle quiz</button>
+</div>
+</div>
+
+<div class=" row ranking-item">
+<div class="col-1 profile-ranking"><img
+src="/images/characters/tony-icon.png">
+</div>
+<div class="col-10 lightgray">
+<p class="ranking-item-name">Mariano</p>
+<p>0 puntos</p>
+<p id="acertijo-mariano" style="display: none">Traté de arreglar un
+reloj
+pero me parece que no lo conseguí. Ahora la aguja pequeña
+funciona
+perfectamente, pero el minutero se mueve en el sentido contrario
+al que
+debería hacerlo, pero con una velocidad constante, de tal manera
+que
+pasa al lado de la aguja pequeña cada 80 minutos.Pregunta: Si a
+las 6:30
+mi reloj muestra la hora correcta, ¿cuándo lo volverá a hacer?
+</p>
+<button class="toggle-button"
+onclick="$('#acertijo-mariano').toggle()"">Toggle quiz</button>
+</div>
+</div>
+
+
+<div class=" row ranking-item">
+<div class="col-1 profile-ranking"><img
+src="/images/characters/sam-icon.png">
+</div>
+<div class="col-10 lightgray">
+<p class="ranking-item-name">Sabrina</p>
+<p>0 puntos</p>
+<p id="acertijo-sabrina"
+style="display: none">
+Nos encontramos con una serie de igualdades, de las cuales tenemos que resolver la última. 8806=6 7111=0 2172=0 6666=4 1111=0 7662=2 9312=1 0000=4 2222=0 3333=0 5555=0 8193=3 8096=5 7777=0 9999=4 7756=1 6855=3 9881=5 5531=0 2581= ¿?
+</p>
+<button class="toggle-button"
+onclick="$('#acertijo-sabrina').toggle()"">Toggle quiz</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script type=" text/javascript" src="js/main.js"></script-->
+<script
+src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+crossorigin="anonymous"></script>
 </body>
 
 </html>
