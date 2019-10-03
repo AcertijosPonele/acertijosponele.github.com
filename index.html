@@ -2,53 +2,149 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-<link rel="stylesheet" href="css/style.css">
-<link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
-<title>Acertijos PONELE (BETA)</title>
-<script src="https://code.jquery.com/jquery-3.4.1.min.js"
-integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
-integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
+    <title>Acertijos PONELE (BETA)</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-<header>
-<h1>ACERTIJOS</h1>
-<h2>(ponele)</h2>
-</header>
-<div class="container" id="content">
-<div class="row">
-<div class="col-12 tile">
-<div class="container" id="ranking">
-<div class="row ranking-title">
-<div class="col-12">
-<h1>Current ranking</h1>
-</div>
-</div>
+    <header>
+        <h1>ACERTIJOS</h1>
+        <h2>(ponele)</h2>
+    </header>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-12 tile">
+                <div class="container" id="ranking">
+                    <div class="row ranking-title">
+                        <div class="col-12">
+                            <h1>Current ranking</h1>
+                        </div>
+                    </div>
 
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/batman-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Batman</p><p>6 puntos</p><p id="acertijo-shalendra" style="display: none">You need to guess the word. This English word has 7 characters. 1st two characters indicate man. 1st three characters indicates woman. 1st four characters indicate a powerful man. All seven characters indicate a powerful woman.</p><button class="toggle-button" onclick="$('#acertijo-shalendra').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/gimli-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Gimli</p><p>6 puntos</p><p id="acertijo-gimli" style="display: none">Hay seis huevos en una canasta, y seis personas.Cada uno toma uno de los huevos. ¿Cómo puede ser que quede un huevo en la canasta?</p><button class="toggle-button" onclick="$('#acertijo-gimli').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/harry-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Harry Potter</p><p>6 puntos</p><p id="acertijo-harry" style="display: none">Se tienen dos velas iguales de manera tal que cada una está exactamente a una hora en consumirse.  Si uno tiene que medir 15 minutos y no tiene cronómetro, cómo tiene que hacer para aprovechar lo que sabe de las velas? Las velas no se pueden cortar con un cuchillo ni se las puede marcar y sólo se puede usar encendedor y los datos que uno tiene sobre cada vela </p><button class="toggle-button" onclick="$('#acertijo-harry').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/brave-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Brave</p><p>4 puntos</p><p id="acertijo-marce" style="display: none">Andrés y Manuel quedan para jugar al tenis. El que pierda el partido, deberá pagarle al ganador una cena. Juegan varios días en ese mes, y deciden que los partidos ganados se compensan con los partidos perdidos, para no tener que invitarse mutuamente,Andrés ganó 4 partidos, y Manuel ganó 3 cenas. ¿Cuántos partidos jugaron en total?</p><button class="toggle-button" onclick="$('#acertijo-marce').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/chandler-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Chandler Bing</p><p>4 puntos</p><p id="acertijo-martin" style="display: none">Un hombre yace muerto en un campo. En el lugar no hay ninguna otra persona ni criatura y al lado del cuerpo sólo hay un paquete sin abrir. La única pista es que el hombre sabía que iba a morir conforme se acercaba al lugar. ¿Qué ha pasado?</p><button class="toggle-button" onclick="$('#acertijo-martin').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/mulan-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Mulan</p><p>4 puntos</p><p id="acertijo-luis" style="display: none">Si 5 máquinas tardan 5 minutos en hacer 5 aparatos, ¿cuánto tiempo tardarían 100 máquinas en hacer 100 aparatos?</p><button class="toggle-button"onclick="$('#acertijo-luis').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/tony-icon.png"></div><div class="col-10 lightgray"> <p class="ranking-item-name">Tony Stark</p> <p>4 puntos</p><p id="acertijo-mariano" style="display: none">Traté de arreglar un reloj pero me parece que no lo conseguí. Ahora la aguja pequeña funciona perfectamente, pero el minutero se mueve en el sentido contrario al que debería hacerlo, pero con una velocidad constante, de tal manera que pasa al lado de la aguja pequeña cada 80 minutos.Pregunta: Si a las 6:30 mi reloj muestra la hora correcta, ¿cuándo lo volverá a hacer?</p><button class="toggle-button" onclick="$('#acertijo-mariano').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/yoda-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Yoda</p><p>4 punto</p><p id="acertijo-fede" style="display: none"> Un hombre murió y fue al Paraiso. Había miles de personas, todas desnudas y con la apariencia que tenían a los 21 años. Miró alrededor tratando de reconocer a alguien. Súbitamente vio a una pareja y supo que se trataba de Adan y Eva ¿Cómo lo supo?</p><button class="toggle-button" onclick="$('#acertijo-fede').toggle()"">Toggle quiz</button></div></div>
-<div class="row ranking-item"><div class="col-1 profile-ranking"><img src="/images/characters/sam-icon.png"></div><div class="col-10 lightgray"><p class="ranking-item-name">Sam</p><p>1 puntos</p><p id="acertijo-sabrina" style="display: none">Nos encontramos con una serie de igualdades, de las cuales tenemos que resolver la última. 8806=6 7111=0 2172=0 6666=4 1111=0 7662=2 9312=1 0000=4 2222=0 3333=0 5555=0 8193=3 8096=5 7777=0 9999=4 7756=1 6855=3 9881=5 5531=0 2581= ¿?</p><button class="toggle-button" onclick="$('#acertijo-sabrina').toggle()"">Toggle quiz</button></div></div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/tony-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Tony Stark</p>
+                            <p>14 puntos</p>
+                            <p id="acertijo-mariano" style="display: none">Un encuestador del censo va a una casa y
+                                pregunta a la señora que le abre la puerta: "¿cuántos niños tiene usted y qué edades
+                                tienen?"
+                                <br>
+                                Mujer: "Tengo tres niños, el producto de sus edades es 36 y la suma de sus edades es
+                                igual al número de la casa de al lado".
+                                <br>
+                                El encuestador va a la casa de al lado, vuelve y dice "me hace falta más información".
+                                <br>
+                                La mujer dice "me tengo que ir, el mayor está durmiendo arriba."
+                                <br>
+                                El encuestador: "Gracias, ahora tengo todo lo que necesito".
+                            </p><button class="toggle-button" onclick="$('#acertijo-mariano').toggle()">Toggle
+                                quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/gimli-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Gimli</p>
+                            <p>10 puntos</p>
+                            <p id="acertijo-gimli" style="display: none">Atendiendo una llamada anónima, la policía
+                                allana una casa para arrestar a un supuesto asesino. No saben cómo es, pero saben que su
+                                nombre es John y que está dentro de la casa. La policía encuentra a cuatro personas
+                                jugando al póquer: una se dedica a la carpintería, la otra maneja un camión, la otra
+                                trabaja en un taller de mecánica y la última trabaja en la estación de bomberos. Sin
+                                ningún tipo de preguntas y sin vacilación, inmediatamente arrestan a quien trabaja en la
+                                estación de bomberos. ¿Cómo estaban seguros de que arrestaron a la persona correcta?</p>
+                            <button class="toggle-button" onclick="$('#acertijo-gimli').toggle()">Toggle
+                                quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/harry-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Harry Potter</p>
+                            <p>9 puntos</p>
+                            <p id="acertijo-harry" style="display: none"> </p><button class="toggle-button"
+                                onclick="$('#acertijo-harry').toggle()">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/yoda-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Yoda</p>
+                            <p>9 puntos</p>
+                            <p id="acertijo-fede" style="display: none"> </p><button class="toggle-button"
+                                onclick="$('#acertijo-fede').toggle()">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/batman-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Batman</p>
+                            <p>8 puntos</p>
+                            <p id="acertijo-shalendra" style="display: none"></p><button class="toggle-button"
+                                onclick="$('#acertijo-shalendra').toggle()">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/brave-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Brave</p>
+                            <p>8 puntos</p>
+                            <p id="acertijo-marce" style="display: none">Un hombre entra en un bar y le pide al camarero
+                                un vaso de agua. El barman se arrodilla buscando algo, saca un arma y le apunta. El
+                                hombre dice ‘gracias’ y se va. Que fue lo que pasó</p><button class="toggle-button"
+                                onclick="$('#acertijo-marce').toggle()">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/mulan-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Mulan</p>
+                            <p>6 puntos</p>
+                            <p id="acertijo-luis" style="display: none"></p><button
+                                class="toggle-button" onclick="$('#acertijo-luis').toggle()">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/chandler-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Chandler Bing</p>
+                            <p>5 puntos</p>
+                            <p id="acertijo-martin" style="display: none"></p><button class="toggle-button"
+                                onclick="$('#acertijo-martin').toggle()">Toggle quiz</button>
+                        </div>
+                    </div>
+                    <div class="row ranking-item">
+                        <div class="col-1 profile-ranking"><img src="/images/characters/sam-icon.png"></div>
+                        <div class="col-10 lightgray">
+                            <p class="ranking-item-name">Sam</p>
+                            <p>4 puntos</p>
+                            <p id="acertijo-sabrina" style="display: none"></p><button class="toggle-button"
+                                onclick="$('#acertijo-sabrina').toggle()">Toggle quiz</button>
+                        </div>
+                    </div>
 
-</div>
-</div>
-</div>
-</div>
-<script type=" text/javascript" src="js/main.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type=" text/javascript" src="js/main.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
